@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        .area-box{
+            width: 80%;
+            background-color: gray;
+            padding: 20px;
+            margin: auto;
+            /* height: 80vh; */
+            
+        }
+        .top-area{
+            width: 100%;
+            background-color:aliceblue ;
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+        .btn{
+            width: 100px;
+            height: 40px;
+            background-color: blueviolet;
+            font-size: 20px;
+            padding: 10px;
+            line-height: 30px;
+            transition: 0.3s;
+            cursor: pointer;
+            
+        }
+        .btn:hover{
+            background-color: chartreuse;
+            
+        }
+        .btn.active{
+            background-color: red;
+            
+
+        }
+        .bottom-area{
+            width: 100%;
+            /* height: 500px; */
+            background-color: darkkhaki;
+            
+
+        }
+        .content{
+            width: 100%;
+            height: 30%;
+            color: cornflowerblue;
+            background-color: red;
+            font-size: 20px;
+            display: none;
+            
+      
+            
+        }
+        .content.active{
+            display: block;
+        }
+
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="area-box">
+        <div class="top-area">
+            <div class="btn" id="btn-1">按鈕一</div>
+            <div class="btn" id="btn-2">按鈕二</div>
+            <div class="btn" id="btn-3">按鈕三</div>
+            <div class="btn" id="btn-4">按鈕四</div>
+            <div class="btn" id="btn-5">按鈕五</div>
+            <div class="btn" id="btn-6">按鈕六</div>
+        </div>
+        <div class="bottom-area">
+            <div class="content" id="content1">
+                <h1>內容1</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni dicta possimus, vero ab fugiat sequi aspernatur dolor voluptatibus voluptatum ipsa. Quod, consequatur. Culpa quaerat eligendi facere minima! Eveniet, explicabo hic.</p>
+            </div>
+            <div class="content" id="content2">
+                <h1>內容2</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, a. Laborum sit ullam veniam debitis! Architecto corrupti reiciendis ullam necessitatibus fugit a est expedita, repudiandae dolore vitae eaque nam laudantium.</p>
+            </div>
+            <div class="content" id="content3">
+                <h1>內容3</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veniam aspernatur magnam quia, cupiditate tempore quis obcaecati eligendi consequuntur officiis adipisci accusamus, fugit, sed harum quas? Perferendis ipsum temporibus recusandae!</p>
+            </div>
+            <div class="content" id="content4">
+                <h1>內容4</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veniam aspernatur magnam quia, cupiditate tempore quis obcaecati eligendi consequuntur officiis adipisci accusamus, fugit, sed harum quas? Perferendis ipsum temporibus recusandae!</p>
+            </div>
+            <div class="content" id="content5">
+                <h1>內容5</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veniam aspernatur magnam quia, cupiditate tempore quis obcaecati eligendi consequuntur officiis adipisci accusamus, fugit, sed harum quas? Perferendis ipsum temporibus recusandae!</p>
+            </div>
+            <div class="content" id="content6">
+                <h1>內容6</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veniam aspernatur magnam quia, cupiditate tempore quis obcaecati eligendi consequuntur officiis adipisci accusamus, fugit, sed harum quas? Perferendis ipsum temporibus recusandae!</p>
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+        var btn = document.querySelectorAll('.btn')
+        var content = document.querySelectorAll('.content')
+        
+
+       
+        for (let index = 0; index < btn.length; index++) {
+            btn[index].onclick = function(){
+                clearall()
+                
+                
+                
+                
+
+                btn[index].classList.add('active')
+                content[index].classList.add('active')
+            }
+        }
+        function clearall(){
+            for (let index2 = 0; index2 < btn.length; index2++) {
+                btn[index2].classList.remove('active')
+                content[index2].classList.remove('active')
+                
+                
+            }
+
+
+        }
+        
+     
+
+
+
+
+    </script>
+
+</body>
+
+</html>
